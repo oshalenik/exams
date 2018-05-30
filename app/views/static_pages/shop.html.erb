@@ -1,0 +1,26 @@
+  <style>
+html, body{margin:0;padding:0; width:100%;}
+      </style>
+
+<hr>
+<div class="onn">Оберіть категорію</div>
+<br>
+<hr>
+
+
+
+<div id="wrapper">
+	<%@categories.each do |category|%>
+	 <div class="section">
+			
+  			<p><strong><div class="on">
+				<b><%= link_to category.name, category_path(category.id) %></b>
+				<hr>
+				<center>
+				<img src="<%=category.image_file_name%>" width="300" height="300">
+				</div></strong></p>
+			</center>
+			</div>
+	<%end%>
+</div>
+<br><br><br><br><br><br><br><br>
