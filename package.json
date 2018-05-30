@@ -1,0 +1,9 @@
+{
+  "name": "CarSales",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "file:bootstrap",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.12.9"
+  }
+}

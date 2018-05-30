@@ -1,0 +1,637 @@
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+
+/* header */
+
+#logo 
+
+{
+font: 15pt sans-serif;  
+  float: left;
+  margin-right: 10px;
+  font-size: 2em;
+  color: #fff;
+  letter-spacing: -1px;
+  padding-top: 5px;
+  font-weight: bold;
+  line-height: 2.5;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+/* footer */
+
+footer {
+  margin-top: 30px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+
+
+.one {
+  padding: 50px 20px;
+  text-align: center;
+}
+.one h1 {
+  font-family: 'Righteous', cursive;
+  position: relative;
+  color: #778899; 
+  display: inline-block;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  font-size: 32px;
+  padding: 11px 300px;
+  margin: 0; 
+  line-height: 1;
+}
+.one h1:before, .one h1:after {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  background: repeating-linear-gradient(180deg, transparent, transparent 2px, #778899 2px, #778899 4px);
+}
+.one h1:before {left: 0;}
+.one h1:after {right: 0;}
+@media (max-width: 420px) {
+  .one h1 {font-size: 2em;}
+}
+
+.demo-1 h1 {
+    margin: 1em 0 0.5em 0;
+    color: #778899;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;  
+    font-size: 32px;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+}
+
+
+
+
+ 
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+/* Columns */
+.left-column {
+  width: 65%;
+  position: relative;
+}
+ 
+.right-column {
+  width: 35%;
+  margin-top: 60px;
+}
+
+/* Left Column */
+img {
+ margin: 0 75px 0 0;
+}
+
+.item {
+    width: 120px;
+    min-height: 120px;
+    max-height: auto;
+    float: left;
+    margin: 3px;
+    padding: 3px;
+}
+
+/* Product Description */
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+
+/* Product Price */
+.product-price {
+ 
+  align-items: center;
+}
+ 
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+ 
+.cart-btn {
+  display: inline-block;
+  background-color: #7DC855;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+.cart-btn:hover {
+  background-color: #64af3d;
+}
+
+.cart-btnn {
+  display: inline-block;
+  background-color: #2196F3;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 5px 30px;
+  transition: all .5s;
+}
+.cart-btnn:hover {
+  background-color: #0b7dda;
+}
+
+
+
+
+.on {
+  font-family: Verdana;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #FF7F50;
+  text-shadow:
+    0 1px 0 #CCCCCC,
+    0 2px 0 #C9C9C9,
+    0 3px 0 #BBBBBB,
+    0 4px 0 #B9B9B9,
+    0 5px 0 #AAAAAA,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.onn {
+  font-family: Verdana;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  color: #808080;
+  text-shadow:
+    0 1px 0 #CCCCCC,
+    0 2px 0 #C9C9C9,
+    0 3px 0 #BBBBBB,
+    0 4px 0 #B9B9B9,
+    0 5px 0 #AAAAAA,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+
+#wrapper {
+    width:960px;
+    height:220px;
+     background: none;
+
+}
+.section {
+    border:solid 1px #999;
+    float:left;
+    height:360px;
+    margin-left:10px;
+    width:310px;
+    background: none;
+}
+#wrapper div:first-child {
+margin-left:0px;
+}
+
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 30px 30px 30px 30px; /* Отступы вокруг картинки */
+   }
+
+
+
+
+
+
+
+
+
+
+   /*//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/**/
+
+
+
+
+
+
+
+
+
+
+
+   
+header{
+ /*margin-top: 200px;*/
+ font-family: Cuprum, Arial, Helvetica, sans-serif;
+ min-width: 100%;
+}
+
+header nav ul{
+    margin: 0;
+}
+
+.dws-menu *{
+ margin: 0;
+ padding: 0;
+}
+.dws-menu ul,
+.dws-menu ol{
+ list-style: none;
+}
+.dws-menu > ul{
+ display: flex;
+ justify-content: center;
+}
+.dws-menu > ul li{
+ position: relative;
+ border-right: 1px solid #c7c8ca;
+}
+.dws-menu > ul li:first-child{
+ border-left: 1px solid #b2b3b5;
+}
+.dws-menu > ul li:last-child{
+ border-right: 1px solid #babbbd;
+}
+.dws-menu > ul li > a i.fa{
+ position: absolute;
+ top: 15px;
+ left: 12px;
+ font-size: 18px;
+}
+.dws-menu > ul li a{
+ display: block;
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c9c9+0,f6f6f6+2,c4c5c7+98,757577+100;Custom+3 */
+ background: rgb(201,201,201); /* Old browsers */
+ background: -moz-linear-gradient(top,  rgba(201,201,201,1) 0%, rgba(246,246,246,1) 2%, rgba(196,197,199,1) 98%, rgba(117,117,119,1) 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top,  rgba(201,201,201,1) 0%,rgba(246,246,246,1) 2%,rgba(196,197,199,1) 98%,rgba(117,117,119,1) 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom,  rgba(201,201,201,1) 0%,rgba(246,246,246,1) 2%,rgba(196,197,199,1) 98%,rgba(117,117,119,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#757577',GradientType=0 ); /* IE6-9 */
+
+ padding: 15px 30px 15px 40px;
+ font-size: 14px;
+ color: #454547;
+ text-decoration: none;
+ text-transform:uppercase;
+ transition: all 0.3s ease;
+}
+.dws-menu li a:hover{
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e1e5+0,454547+2,454547+98,e0e1e5+100 */
+ background: rgb(224,225,229); /* Old browsers */
+ background: -moz-linear-gradient(top,  rgba(224,225,229,1) 0%, rgba(69,69,71,1) 2%, rgba(69,69,71,1) 98%, rgba(224,225,229,1) 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top,  rgba(224,225,229,1) 0%,rgba(69,69,71,1) 2%,rgba(69,69,71,1) 98%,rgba(224,225,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom,  rgba(224,225,229,1) 0%,rgba(69,69,71,1) 2%,rgba(69,69,71,1) 98%,rgba(224,225,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e1e5', endColorstr='#e0e1e5',GradientType=0 ); /* IE6-9 */
+
+ color: #ffffff;
+ box-shadow: 1px 5px 10px -5px black;
+ transition: all 0.3s ease;
+}
+
+/*sub menu*/
+.dws-menu li ul{
+ position: absolute;
+ min-width: 150px;
+ display: none;
+}
+.dws-menu li > ul li{
+ border: 1px solid #c7c8ca;
+}
+.dws-menu li > ul li a{
+ padding: 10px;
+ text-transform: none;
+ background: #e4e4e5;
+}
+.dws-menu li > ul li ul{
+ position: absolute;
+ right: -150px;
+ top: 0;
+}
+.dws-menu li:hover > ul{
+ display: block;
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6, p {
+ margin: 0;
+ padding: 0;
+}
+.clear {
+ clear:both;
+}
+p {
+ margin: 0 0 1em 0;
+ font-size: 93%;
+ line-height: 1.5em;
+}
+body {
+ font-family: Helvetica, Arial, sans-serif;
+ padding: 0;
+ margin: 0;
+ background-color: #ffffff;
+}
+img {
+ max-width: 100%;
+ height: auto;
+ margin: 0 0 10px 0;
+}
+.logo {
+ font-size: 30px;
+ font-weight: bold;
+ color: #4b4b4b;
+}
+
+/* Section Inner */
+div.section-inner {
+ max-width: 1100px;
+ padding: 0 20px;
+ margin: 0 auto;
+}
+
+/* Header */
+div.header {
+ background-color: #E9E9E9;
+ background-image: url("../assets/whirlpool.png");
+ padding: 40px 0;
+}
+
+/* Navigation */
+#dws-menu,
+header label {
+ display: none;
+}
+header nav,
+header .leb-menu {
+ background-color: #04948c;
+}
+.menu {
+ z-index: 100;
+}
+.menu ul {
+ margin: 0;
+ list-style: none;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+}
+.menu li:hover {
+ background: rgba(0,0,0,0.3);
+}
+.menu li a {
+ display: block;
+ padding: 15px 15px;
+ color: #fff;
+ text-decoration: none;
+ text-transform:uppercase;
+ font-size: 16px;
+}
+
+/* Body Content */
+div.body-content {
+ padding: 30px 0;
+ background-color: #FFF;
+}
+div.banner {
+ text-align: center;
+ width: 100%;
+ height: 300px;
+ overflow: hidden;
+ position: relative;
+}
+h2.text-banner {
+ position: absolute;
+ color: #fff;
+ padding: 25px 15px;
+ background-color: rgba(0,0,0,0.3);
+ top: 30%;
+ left: 20%;
+ font-size: 2em;
+}
+/* news-ist */
+div.news-list {
+ padding: 20px 0 20px 0;
+}
+div.one-news {
+ width: 30%;
+ float: left;
+ margin-right: 5%;
+}
+div.one-news-last {
+ margin: 0;
+}
+
+/* Main Column */
+div.main {
+ width: 75%;
+ float: left;
+ margin-right: 5%;
+}
+
+
+
+
+div.one-news {
+ width: 47.5%;
+}
+div.one-news-second {
+ margin: 0;
+}
+div.one-news-last {
+ clear: both;
+ float: none;
+ width: 100%;
+ padding-top: 20px;
+}
+header label:hover{
+ cursor: pointer;
+ background: rgba(0,0,0,0.3);
+}
+
+@media all and (max-width: 768px) {
+
+ header label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-right: 1px solid #fff;
+ }
+ .section-inner.indents {
+  padding: 0;
+ }
+ .menu {
+  position: absolute;
+  width: 200px;
+  margin-left: -200px;
+  transition: all 0.5s;
+ }
+ .menu ul {
+  flex-direction: column;
+ }
+ #dws-menu:checked ~ .menu {
+  margin: 0;
+ }
+ .menu li {
+  border-top: 1px solid #fff;
+ }
+ .menu li a {
+  font-size: 14px;
+  padding: 15px 10px;
+ }
+ div.banner {
+  height: 200px;
+ }
+ h2.text-banner {
+  left: 15%;
+  font-size: 1.5em;
+ }
+}
+
+@media all and (max-width: 500px) {
+
+ div.mobile {
+  width: auto;
+  float: none;
+  margin-right: 0;
+ }
+ .hide-mobile {
+  display: none;
+ }
+}
+
+
+
+
+
