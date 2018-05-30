@@ -1,0 +1,31 @@
+  <style>
+html, body{margin:0;padding:0; width:100%;}
+      </style>
+<main class="container1">
+ 
+<!-- Left Column / Headphones Image -->
+  <div class="img">
+<img src="<%=@product.image_file_name%>" width="400" height="400" alt="Product picture">
+  </div>
+ 
+ 
+  <!-- Right Column -->
+  <div class="right-column">
+ 
+    <!-- Product Description -->
+    <div class="product-description">
+      <span>Product:</span>
+      <h3><%=@product.name %></h3>
+      <p><%=@product.description%></p>
+    </div>
+    
+ 
+    <!-- Product Pricing -->
+    <div class="product-price">
+     <span>Ціна: <%=@product.price %> $</span>
+      <div class="cart-btn">
+      <%= link_to "Замовити", add_to_cart_path(@product.id) %>
+      </div>
+    </div>
+    </div>
+</main>

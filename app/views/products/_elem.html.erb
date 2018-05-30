@@ -1,0 +1,26 @@
+<div class="container">
+		<div class="container-fluid text-center bg-grey">
+			<div class="col-lg-4">
+				<div class="thumbnail">
+
+					<p><strong><h3 style="color: #0772A1;"></h3></strong></p>
+					<div class="img">
+					<img src="<%=product.image_file_name%>" width="400" height="400">
+                    </div>
+					<h3><%= product.name %></h3>
+					
+
+<h4>Ціна: <span style="color: green;"><%= product.price %> $</span></h4>
+  
+<div class="cart-btnn">
+        <h5><%= link_to "Детальніше", product %></h5>
+ </div>
+
+				</div>
+			
+			</div>
+		
+		</div>
+		
+	</div>
+<hr>
