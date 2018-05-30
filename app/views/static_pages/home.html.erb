@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<meta charset="utf-8">
+<meta name="Keywords" content="cssplay, css, play, cascading, style, sheets, responsive, Slider, slideshow, picture, Font, Awesome">
+<meta name="Description" content="CSS play - Responsive 'Swiper' slideshow with html5 picture and Font Awesome">
+ 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"> 
+ 
+<style>
+/* general styling */
+html, body{margin:0;padding:0; width:100%;}
+.wrapper {width:75%; max-width:1000px; margin:100px auto -100px auto;}
+.wrapper h1.cssplay {margin:0; padding:0; color:#2ab; font:300 50px/60px 'Lato', sans-serif;}
+.wrapper h1.cssplay a {color:#2ab; text-decoration:none;}
+.wrapper h2.title {margin:0; padding:10px 0; color:#444; font:300 20px/30px 'Lato', sans-serif;}
+.wrapper h2.title a {color:#2ab; text-decoration:none;}
+.wrapper h3.date {margin:0; padding:0; color:#000; font:300 16px/25px 'Lato', sans-serif;}
+.wrapper h2.info {margin:0; padding:0; color:#000; font:300 30px/40px 'Lato', sans-serif;}
+.wrapper p {margin:0; padding:8px 0; color:#000; font:300 20px/30px 'Lato', sans-serif;}
+.wrapper p a {color:#2ab; text-decoration:none;}
+.download {display:inline-block; width:200px; background:#080; border-radius:5px;  font:300 20px/30px 'Lato', sans-serif; color:#fff; text-decoration:none; padding:10px; white-space:nowrap;}
+</style>
+
+<style>
+/* swiper styling */
+.swiper-container{width:100%; background:#fff; margin:50px 0;}
+.swiper-slide{text-align:center;background:#fff;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;}
+picture {width:calc(100% - 60px); padding-bottom:40px;}
+picture img {display:block; width:100%;}
+.swiper-pagination span {width:20px; height:20px; background:#c60; font-size:15px; color:#fff; transition:0.5s;}
+.swiper-pagination span:hover {opacity:1;}
+.swiper-button-prev-icon {position:absolute;top:0;width:31px; left:-1px; height:100%;margin-top:-22px;z-index:10;cursor:pointer; font-size:60px; text-align:center; background:#fff; color:#c60; display:flex; flex-direction:column; flex-wrap:nowrap; justify-content:center;}
+.swiper-button-next-icon {position:absolute;top:0; right:-1px;width:31px;height:100%;margin-top:-22px;z-index:10;cursor:pointer;font-size:60px; text-align:center; background:#fff; color:#c60; display:flex; flex-direction:column; flex-wrap:nowrap; justify-content:center;}
+.swiper-container section {position:absolute; left:30px; top:0; width:calc(100% - 60px); height:calc(100% - 50px); background:url(swiper-images/bg-grid.png); background-attachment:fixed; text-align:center;}
+.swiper-container h1 {margin:0; padding:0; color:#fff; font:300 50px/70px 'Lato', sans-serif;}
+.swiper-container p {margin:0; padding:0; color:#fff; font:400 20px/30px 'Lato', sans-serif; position:absolute; bottom:20px; left:0; width:100%;}
+@media only screen and (max-width: 640px) {
+  .swiper-container h1 {font:300 40px/55px 'Lato', sans-serif;}
+  .swiper-container p {font:400 18px/22px 'Lato', sans-serif;}
+}
+@media only screen and (max-width: 480px) {
+  .swiper-button-prev-icon {display:none;}
+  .swiper-button-next-icon {display:none;}
+  picture {width:100%;}
+  .swiper-container section {left:0; width:100%;}
+  .swiper-container h1 {font:300 30px/40px 'Lato', sans-serif;}
+  .swiper-container p {font:400 15px/20px 'Lato', sans-serif;}
+  .swiper-container section {width:100%;}
+}
+</style>
+</head>
+<body>
+
+
+<div class="wrapper" onclick="">
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <picture>
+        <source srcset="https://pp.userapi.com/c837733/v837733633/39807/vPLovTk0CBY.jpg" media="(max-width: 320px)">
+        <source srcset="assets/pic1b.jpg" media="(max-width: 640px)">
+        <source srcset="https://cdn.shopify.com/s/files/1/1950/4033/products/SCR_SIdeshot_wShadow_BrandBlue_mStr_2048x2048.png?v=1495192375">
+        <img src="assets/pic1a.jpg" alt="My default image">
+      </picture>
+      <section>
+        <h1></h1>
+      </section>
+    </div>
+    <div class="swiper-slide">
+      <picture>
+        <source srcset="https://pp.userapi.com/c837733/v837733633/39807/vPLovTk0CBY.jpg" media="(max-width: 320px)">
+        <source srcset="assets/pic2b.jpg" media="(max-width: 640px)">
+        <source srcset="https://cdn.shopify.com/s/files/1/1950/4033/products/SCR_SIdeshot_wShadow_Pitchblack_oStr_2048x2048.jpg?v=1498135355">
+        <img src="assets/pic2a.jpg" alt="My default image">
+      </picture>
+      <section>
+        <h1></h1>
+      </section>
+    </div>
+    <div class="swiper-slide">
+      <picture>
+        <source srcset="https://pp.userapi.com/c837733/v837733633/39807/vPLovTk0CBY.jpg" media="(max-width: 320px)">
+        <source srcset="assets/pic3b.jpg" media="(max-width: 640px)">
+        <source srcset="https://cdn.shopify.com/s/files/1/1950/4033/products/SCR_SIdeshot_wShadow_FoamWhite_oStr_2048x2048.jpg?v=1498135528">
+        <img src="assets/pic3a.jpg" alt="My default image">
+      </picture>
+      <section>
+        <h1></h1>
+      </section>
+    </div>
+    <div class="swiper-slide">
+      <picture>
+        <source srcset="https://pp.userapi.com/c837733/v837733633/39807/vPLovTk0CBY.jpg" media="(max-width: 320px)">
+        <source srcset="assets/pic4b.jpg" media="(max-width: 640px)">
+        <source srcset="https://cdn.shopify.com/s/files/1/1950/4033/products/SCR_SIdeshot_wShadow_Pitchblack_oStr_2048x2048.jpg?v=1498135355">
+        <img src="assets/pic4a.jpg" alt="My default image">
+      </picture>
+
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next-icon"><i class="fa fa-angle-right"></i></div>
+  <div class="swiper-button-prev-icon"><i class="fa fa-angle-left"></i></div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+ 
+<script>
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    keyboardControl: true,
+    pagination: '.swiper-pagination',
+    paginationBulletRender: function (swiper, index, className) {
+      return '<span class="' + className + '"><i class="fa fa-angle-up"></i></span>';
+    },
+    paginationClickable: true,
+    spaceBetween: -30,
+    breakpoints: {
+    480: {
+      spaceBetween: 30
+      }
+    },
+    nextButton: '.swiper-button-next-icon',
+    prevButton: '.swiper-button-prev-icon',
+    autoplay:6000,
+    autoplayDisableOnInteraction:false,
+    speed:1000,
+    grabCursor:true,
+    roundLengths: true
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body-content">
+  <div class="section-inner">
+<br>
+<hr>
+<h1>SEEV CITYCOCO - стильно , модно , економічно !</h1>
+<hr>
+    <!-- news-list -->
+    <div class="news-list">
+      <!-- one-news -->
+      <div class="one-news mobile">
+       <center> <img src="http://www.platform.in.ua/wp-content/uploads/2015/12/GARANTIYA-YAKOSTI.png" alt="Pros"> </center>
+       <br>
+       <br>
+       <br>
+       <br>
+      
+        <h2>Чому саме ми ?</h2>
+       <center><h4><%= link_to "Гарантія.Якість.Обслуговування", pros_path %></h4></center>
+      </div><!--/one-news-->
+
+      <!-- one-news -->
+      <div class="one-news one-news-second mobile">
+        <img src="assets/bike.jpg" alt="Bike">
+        <h2>Оберіть бажану комплектацію</h2>
+        <center><h4><%= link_to "в нашому магазині !", shop_path %></h4></center>
+      </div><!--/one-news-->
+
+      <!-- one-news -->
+     <!--  <div class="one-news one-news-last mobile">
+        <center><img src="https://images.ua.prom.st/740722714_w640_h2048_snimok_ekrana___25_v_20.09.jpg?PIMAGE_ID=740722714" alt="Bike"></center>
+        <h2  >Чому обирають SEEV CITYCOCO ?</h2>
+        <hr>
+        <center><h4><%= link_to "Дізнатись !", about_path %><h4></center>
+      </div><!--/one-news-->
+
+    </div><!--/news-list-->
+
+  </div>
+</div><!--/body-content-->
+ <br>
+       <br>
+       <br>
+       <br> 
+       <br>
+       <br>
+       <br> 
+       <br>
+       <br>
+       <br> 
+       <br>
+       <br>
+       <br> 
+       <br>
+       <br>
+       <br> 
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact us</title>
+    
+    <!-- 2. Необходимо стилизовать этот элемент, задать ему высоту и ширину чтобы он был виден на странице -->
+    <style>
+html, body{margin:0;padding:0; width:100%;}
+    
+        #map {
+            width: 50%;
+            height: 350px;
+            float: left; /* Выравнивание по правому краю */
+    margin: 5px 5px 0 0; /* Отступы вокруг фотографии */
+        }
+    </style>
+</head>
+<body>
+<br>
+<div class="onn">Контакти</div>
+<hr>
+    
+    <!-- 1. Создаем элемент внутри которого у нас будет отображаться карта Google Maps -->
+    <div id="map"></div>
+
+    <!-- 4. Пишем скрипт который создаст и отобразит карту Google Maps на странице. -->
+    <script type="text/javascript">
+
+       // 4. Пишем скрипт который создаст и отобразит карту Google Maps на странице.
+
+// Определяем переменную map
+var map;
+
+// Функция initMap которая отрисует карту на странице
+function initMap() {
+
+	// В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
+	map = new google.maps.Map(document.getElementById('map'), {
+		// При создании объекта карты необходимо указать его свойства
+		// center - определяем точку на которой карта будет центрироваться
+		center: {lat: 48.613806, lng: 22.264238},
+		// zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
+		zoom: 13,
+
+		// Добавляем свои стили для отображения карты
+		styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
+	});
+
+	// Создаем маркер на карте
+	var marker = new google.maps.Marker({
+
+		// Определяем позицию маркера
+	    position: {lat: 48.613806, lng: 22.264238},
+
+	    // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
+	    map: map,
+
+	    // Пишем название маркера - появится если навести на него курсор и немного подождать
+	    title: 'We are here !',
+
+	});
+
+
+
+}
+
+    </script>
+
+    <br><br><br><br><br>
+<div align="center">
+<address>
+<b>
+<strong>Адрес:</strong><br>
+Україна , Закарпатська обл.<br>
+м. Ужгород<br>
+<abbr title="Телефон">Телефон:</abbr> +38 (066) 406 12 79
+</b>
+</address>
+</div>
+
+    <!-- 3. Подключаем библиотеку Google Maps Api, чтобы создать карту -->
+    <!-- Атрибуты async и defer - позволяют загружать этот скрипт асинхронно, вместе с загрузкой всей страницы  -->
+    <!-- В подключении библиотеки Google Maps Api в конце указан параметр callback, после  подключения и загрузки этого Api сработает функция initMap для отрисовки карты,  которую мы описали выше -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+    
+
+
+<!-- *CONTACTS* -->
+
+<div class="container">
+<!-- row -->
+<div class="text-center row">
+<hr>
+<p class="lead">Якщо у Вас виникли питання - скористайтеся формою нижче або зателефонуйте нам !</p>
+<div class="col-md-6 col-md-offset-3 col-xs-12 col-sm-12">
+<hr>
+<br><br><br>
+<!-- Contacts form -->
+<form action= "post.php" method= "POST">
+<div class="form-group">
+<input type= "text" name= "name" class="form-control" placeholder="Ваше ім'я:" required>
+</div>
+<div class="form-group">
+<input type= "text" name= "email" class="form-control" placeholder="Ваш email:" required>
+</div>
+<div class="form-group">
+<input type= "tel" maxlength="13" name= "tel" class="form-control" placeholder="Ваш номер телефона:" required>
+</div>
+<div class="form-group">
+<textarea name= "message" class="form-control" rows="5" placeholder="Ваше повідомлення:" required></textarea>
+</div>
+<div class="form-group">
+<br>
+<button id="btn" class="btn btn-default" input type= "submit" value= "Отправить">Надіслати</button>
+</div>
+</form>
+
+
+
+</body>
+</html>
