@@ -1,0 +1,25 @@
+<header>
+  <div class="header">
+    <div class="section-inner">
+      <div class="logo">ELBIKES.COM.UA</div>
+    </div>
+  </div>
+
+  <input type="checkbox" id="dws-menu">
+  <div class="leb-menu">
+    <label for="dws-menu"><img src="assets/icono-menu.png"></label>
+  </div>
+  <!-- nav -->
+  <nav class="menu">
+    <div class="section-inner indents">
+      <ul>
+         <li><%= link_to "Головна", root_path %></li>  
+           <li><%= link_to "Магазин", shop_path %></li>
+        <li><%= link_to "Тест-драйв", our_advantages_path %></li>
+        <li><%= link_to "Мій кошик", cart_path %></li>
+<li> <%= link_to "Авторизація", new_model_registration_path %></li>
+        <li><%= link_to "Контакти", contact_path %></li>
+      </ul>
+    </div>
+  </nav><!--/nav-->
+</header>
