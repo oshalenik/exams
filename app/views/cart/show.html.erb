@@ -1,0 +1,34 @@
+  <style>
+html, body{margin:0;padding:0; width:100%;}
+      </style>
+      <hr>
+<h1>Мій кошик:</h1>
+<hr>
+<% unless @cart.line_items.any? %>
+  <p>Ваш кошик порожній => <%= link_to "Магазин", shop_path %>
+<% end %>
+
+<table width="100%">
+  <tr>
+    <th>Позиція</th>
+    <th>Ціна</th>
+  </tr>
+  <% for line_item in @cart.line_items %>
+    <tr>
+      <td><%= line_item.product.name %></td>
+      <td><%= number_to_currency line_item.price %></td>
+      <td><%= link_to "Видалити", remove_from_cart_path(line_item), :method => :post %></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td>Загалом:</td>
+    <td><%= number_to_currency @cart.total_price %></td>
+  </tr>
+</table>
+
+<hr />
+<%= form_tag checkout_path, :style => "text-align: right" do |f| %>
+  <%= link_to "Продовжити покупку!", root_path %>
+  або
+  <%= submit_tag "Підтвердити!" %>
+<% end %>

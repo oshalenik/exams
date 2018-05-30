@@ -1,0 +1,10 @@
+ <hr>
+<div class="on">
+	<%= @category.name %>
+</div>
+<hr>
+<%@products.each do |product|%>
+<%= render 'products/elem',product:product %>
+<%end%>
+	<p align="center"> <%= link_to "Повернутися до категорій", shop_path %> </p>
+	
